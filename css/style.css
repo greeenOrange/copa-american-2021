@@ -16,6 +16,7 @@ P{
     margin-bottom: 2rem;
 }
 
+
 /*--------- common css ---------- */
 
 
@@ -44,10 +45,14 @@ nav>a{
     background-color: #E02C6D;
     padding: 10px 24px;
     color: #fff;
-    
+   
 }
-a .fas{
-    margin-right: 10px;
+a >.fas{
+    margin-right:3px;
+}
+
+a:hover .fas{
+    margin-right:5px;
 }
 /*------ header style ---------*/
 
@@ -74,21 +79,29 @@ a .fas{
     font-size: 2.5em;
     color: #fff;
 }
-.left-banner >a{
+.left-banner >.btn{
     background-color: #E02C6D;
     color: #fff;
-    padding: 15px 29px;
+    padding: 15px 24px;
     margin-bottom: 2rem;
 }
 .left-banner .fas{
-    margin-left: 10px;
+    margin-left: 5px;
     color: #fff;
+    transition: all .5s ease;
+}
+.btn:hover{
+    background-color: #eb8bae;
+}
+.btn:hover .fas{
+    margin-left: 10px;
 }
 .right-banner{
     width:549px;
     height:427px;
     flex: 1;
 }
+
 span{
     display: block;
 
@@ -96,8 +109,13 @@ span{
 .right-banner img{
     width:100%;
     height: 100%;
+    
+    transition: transform .3s ease;
 }
-
+.right-banner img:hover{
+    transform: translateY(-5px);
+    cursor:pointer
+}
 /*---------- banner style ---------*/
 
 /* player style */
@@ -173,4 +191,58 @@ footer img{
     background: #9b9696;
     border-radius:2rem;
     margin: 1em .3em;
+    transition: transform .5s ease-in;
 }
+.fab:hover{
+    transform: scale(1.2);
+    cursor:pointer;
+    
+}
+
+/*--------- responsive web site ------------*/
+@media only screen and (max-width:668px){
+    nav{
+        
+    }
+    nav > .menu{
+        display:block;
+    }
+    ul > li{
+        padding: 1em 0em;
+    }
+    nav > a{
+        padding: 10px 17px;
+    }
+    .banner{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .left-banner h1{
+        font-size: 30px;
+    }
+    .left-banner > .btn{
+      
+    }
+    .right-banner{
+        margin-top: 3rem;
+        width: 380px;
+        height: 350px;
+    }
+    .container{
+        width: 100%;
+    }
+    .icon-player{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .football-highlights{
+        display: flex;     
+      
+    }
+    .football-highlights img{
+        width: 100%;
+    }
+}
+
+/*---------- responsive web site ------------*/
